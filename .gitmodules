@@ -1,0 +1,6 @@
+[submodule "src/webview_deno"]
+	path = src/webview_deno
+	url = https://github.com/milahu/webview_deno
+[submodule "src/plug"]
+	path = src/plug
+	url = https://github.com/milahu/plug

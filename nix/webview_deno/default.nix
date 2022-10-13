@@ -9,9 +9,9 @@ let
     pname = "webview_deno";
     version = "0.7.4-2022-09-30";
 
-    # FIXME use same webview_deno in
-    # main.ts and nix/webview_deno/default.nix
-
+    # use same webview_deno as in main.ts
+    src = ../../src/webview_deno;
+    /*
     src = fetchFromGitHub {
       # https://github.com/webview/webview_deno
       owner = "webview";
@@ -21,15 +21,16 @@ let
       fetchSubmodules = true;
     };
 
-    lockfileHash = "sha256-6cwa8WXp3X5zEiys79TbVr506HRbhDwsirRcbSTa4WA=";
-
-    buildInputs = [ deno pkg-config webkitgtk ];
-
     patches = [
       # https://github.com/webview/webview_deno/pull/144
       # print command before running
       ./pull-144.diff
     ];
+    */
+
+    lockfileHash = "sha256-6cwa8WXp3X5zEiys79TbVr506HRbhDwsirRcbSTa4WA=";
+
+    buildInputs = [ deno pkg-config webkitgtk ];
 
     # TODO list
     mainScript = "script/build.ts";
